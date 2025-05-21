@@ -1,32 +1,33 @@
 # Jenkins Demo
 
-This repository contains hands-on Jenkins pipeline projects to demonstrate various CI/CD concepts.
+This repository contains hands-on Jenkins pipeline projects demonstrating various CI/CD concepts using Jenkins, Docker, and GitHub integration.
 
-## Structure
+### 📁 Structure
 
-- `basic-pipeline/`  
-  A simple declarative Jenkins pipeline to run basic shell steps.
+- `first-jenkins-file/`  
+  A basic Jenkins pipeline that demonstrates a simple CI setup using a Docker container as the build agent. Ideal for understanding controller-agent architecture and Docker integration.
 
-- `multi-stage-docker/`  
-  A more advanced pipeline using Docker containers as agents for each stage.
+- `multi-stage | multi-build/`  
+  A more advanced pipeline that uses different Docker containers for each stage (e.g., Maven for the backend, Node.js for the frontend). Demonstrates stage-specific agent usage and real-world pipeline design.
 
-## Technologies Used
+### 🛠️ Technologies Used
 
-- Jenkins
-- Docker
-- Groovy (Jenkins Pipeline)
-- GitHub for SCM integration
+- Jenkins (standalone setup on EC2)
+- Docker (as Jenkins build agent)
+- Groovy (Jenkins Pipeline DSL)
+- GitHub (for SCM and later webhook trigger)
 
-## Goal
+### 🎯 Goals
 
 To learn and demonstrate:
-- Declarative pipelines
-- Jenkins + Docker agent usage
-- Stage-specific builds
-- SCM integration using GitHub
+- Jenkins declarative pipeline syntax
+- Controller-agent architecture (with Docker as agent)
+- Multi-stage pipelines with isolated environments
+- GitHub integration with Jenkins (manual and automated)
 
-## Setup (for both demos)
+### ⚙️ Setup (applies to both folders)
 
-- Jenkins installed on an EC2 instance
-- Docker installed and configured for Jenkins user
-- Docker Pipeline plugin installed
+- Jenkins installed on an EC2 instance (controller and agent in standalone mode)
+- Docker installed and Jenkins user granted Docker daemon access
+- Docker Pipeline plugin installed in Jenkins
+- GitHub repository connected to Jenkins via webhook (for automation in future steps)
