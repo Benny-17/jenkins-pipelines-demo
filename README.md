@@ -2,7 +2,7 @@
 
 This repository contains hands-on Jenkins pipeline projects to demonstrate various CI/CD concepts.
 
-## 📁 Structure
+## Structure
 
 - `basic-pipeline/`  
   A simple declarative Jenkins pipeline to run basic shell steps.
@@ -10,14 +10,14 @@ This repository contains hands-on Jenkins pipeline projects to demonstrate vario
 - `multi-stage-docker/`  
   A more advanced pipeline using Docker containers as agents for each stage.
 
-## 💡 Technologies Used
+## Technologies Used
 
 - Jenkins
 - Docker
 - Groovy (Jenkins Pipeline)
 - GitHub for SCM integration
 
-## 🧪 Goal
+## Goal
 
 To learn and demonstrate:
 - Declarative pipelines
@@ -25,7 +25,7 @@ To learn and demonstrate:
 - Stage-specific builds
 - SCM integration using GitHub
 
-## 👷‍♂️ Setup (for both demos)
+## Setup (for both demos)
 
 - Jenkins installed on an EC2 instance
 - Docker installed and configured for Jenkins user
