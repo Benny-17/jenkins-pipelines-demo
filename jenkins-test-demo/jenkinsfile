@@ -1,21 +1,24 @@
 pipeline {
-  agent any
-
-  stages {
-    stage('Install Dependencies') {
-      steps {
-        dir('jenkins-test-demo') {
-          sh 'npm install'
+    agent {
+        docker {
+            image 'node:16-alpine'
+            args '-u root:root'  // Run as root to avoid permission issues
         }
-      }
     }
-
-    stage('Run Tests') {
-      steps {
-        dir('jenkins-test-demo') {
-          sh 'npm test'
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                dir('jenkins-test-demo') {
+                    sh 'npm install'
+                }
+            }
         }
-      }
+        stage('Run Tests') {
+            steps {
+                dir('jenkins-test-demo') {
+                    sh 'npm test'
+                }
+            }
+        }
     }
-  }
 }
